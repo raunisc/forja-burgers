@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forja dos Burgers — Cardápio Digital</title>
+  <meta name="description" content="Cardápio digital da hamburgueria Forja dos Burgers. Minérios que viram burgers épicos — sabores épicos em cada nível." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Cinzel:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a href="#cardapio" class="skip-link">Pular para o cardápio</a>
+
+  <!-- Ambient Ember Glow -->
+  <div class="ember-ambient" aria-hidden="true"></div>
+
+  <!-- Top Utility Bar -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#topo" class="brand-compact" aria-label="Forja dos Burgers — Início">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 36 36" fill="none">
+            <polygon points="18,2 32,11 27,32 9,32 4,11" fill="url(#gemGrad)" stroke="#FDBA74" stroke-width="1.5"/>
+            <path d="M12 22L24 10M24 22L12 10" stroke="#141216" stroke-width="2.4" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="gemGrad" x1="4" y1="2" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FDE047"/>
+                <stop offset="0.55" stop-color="#F59E0B"/>
+                <stop offset="1" stop-color="#C2410C"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="brand-name-stack">
+          <span class="brand-title">FORJA DOS BURGERS</span>
+          <span class="brand-sub">CARDÁPIO DIGITAL</span>
+        </span>
+      </a>
+
+      <div class="topbar-actions">
+        <span class="status-pill" aria-label="Status da Forja">
+          <span class="status-dot" aria-hidden="true"></span>
+          Forja Acesa
+        </span>
+        <button type="button" class="cart-trigger" id="openCartBtn" aria-label="Abrir comanda do pedido" aria-controls="cartDrawer" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-trigger-label">Comanda</span>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="topo">
+    <div class="hero-bg" aria-hidden="true">
+      <img src="assets/combo_batata_refri/16_Dragao_Cristalino.png" alt="" class="hero-bg-img" />
+      <div class="hero-scrim"></div>
+    </div>
+
+    <div class="container hero-content">
+      <div class="hero-copy">
+        <div class="hero-eyebrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M14.5 9.5L21 3m0 0h-5m5 0v5M9.5 14.5L3 21m0 0h5m-5 0v-5M14.5 14.5L21 21M9.5 9.5L3 3"/>
+          </svg>
+          <span>SABORES ÉPICOS EM CADA NÍVEL</span>
+        </div>
+
+        <h1 class="hero-title">
+          FORJA <span class="hero-title-small">DOS</span>
+          <span class="hero-title-accent">BURGERS</span>
+        </h1>
+
+        <p class="hero-tagline">
+          Minérios que viram <strong>burgers épicos</strong>. Do Cobre Clássico ao lendário Dragão Cristalino — escolha seu nível na forja e monte seu combo.
+        </p>
+
+        <div class="hero-cta-row">
+          <a href="#simples" class="btn btn-primary">
+            Explorar Cardápio
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+              <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+          </a>
+          <a href="#combos-completos" class="btn btn-secondary">
+            Ver Combos Completos
+          </a>
+        </div>
+      </div>
+
+      <aside class="hero-tiers" aria-label="Níveis da Forja">
+        <div class="tier-plate">
+          <span class="tier-plate-label">TABELA DE NÍVEIS</span>
+          <ul class="tier-list">
+            <li>
+              <a href="#simples">
+                <span class="tier-name">Nível 1 - Burgers Clássicos</span>
+                <span class="tier-price">R$ 24,90</span>
+              </a>
+            </li>
+            <li>
+              <a href="#crispy">
+                <span class="tier-name">Nível 2 - Burgers Premium</span>
+                <span class="tier-price">R$ 29,90</span>
+              </a>
+            </li>
+            <li>
+              <a href="#duplos">
+                <span class="tier-name">Nível 3 - Burgers Duplos</span>
+                <span class="tier-price">R$ 34,90</span>
+              </a>
+            </li>
+            <li>
+              <a href="#duplos-crispy">
+                <span class="tier-name">Nível 4 - Burgers Duplos Premium</span>
+                <span class="tier-price">R$ 39,90</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Sticky Category Navigation + Search & Filters -->
+  <div class="controls-wrap" id="cardapio">
+    <div class="container">
+      <nav class="category-nav" aria-label="Categorias do cardápio">
+        <a href="#simples" class="cat-pill active" data-section="simples">Nível 1 - Clássicos</a>
+        <a href="#crispy" class="cat-pill" data-section="crispy">Nível 2 - Premium</a>
+        <a href="#duplos" class="cat-pill" data-section="duplos">Nível 3 - Duplos</a>
+        <a href="#duplos-crispy" class="cat-pill" data-section="duplos-crispy">Nível 4 - Duplos Premium</a>
+        <a href="#combos-refri" class="cat-pill" data-section="combos-refri">Combos + Refri</a>
+        <a href="#combos-completos" class="cat-pill" data-section="combos-completos">Combos Completos</a>
+        <a href="#acompanhamentos" class="cat-pill" data-section="acompanhamentos">Acompanhamentos</a>
+        <a href="#bebidas" class="cat-pill" data-section="bebidas">Bebidas</a>
+      </nav>
+
+      <div class="filter-bar">
+        <div class="search-field">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <input type="search" id="searchInput" placeholder="Buscar por minério, queijo ou molho (ex: Rubi, cheddar, defumado)..." aria-label="Buscar no cardápio" />
+          <button type="button" id="clearSearchBtn" class="clear-search" aria-label="Limpar busca" hidden>&times;</button>
+        </div>
+
+        <div class="quick-filters" role="group" aria-label="Filtros rápidos">
+          <button type="button" class="filter-chip active" data-filter="all">Todos</button>
+          <button type="button" class="filter-chip" data-filter="cheddar">Cheddar</button>
+          <button type="button" class="filter-chip" data-filter="mussarela">Mussarela</button>
+          <button type="button" class="filter-chip" data-filter="forja">Molho da Forja</button>
+          <button type="button" class="filter-chip" data-filter="defumado">Defumado</button>
+          <button type="button" class="filter-chip" data-filter="crispy">Crispy</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Menu Sections Container -->
+  <main class="container menu-main" id="menuRoot" aria-live="polite">
+    <!-- Rendered dynamically from menu-data.js -->
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong class="footer-brand">FORJA DOS BURGERS</strong>
+        <p class="footer-note">Minérios que viram burgers épicos · Sabores épicos em cada nível.</p>
+      </div>
+      <p class="footer-meta">Preços sujeitos a alteração sem aviso prévio. Imagens ilustrativas.</p>
+    </div>
+  </footer>
+
+  <!-- Mobile Floating Cart Bar -->
+  <div class="mobile-cart-bar" id="mobileCartBar" hidden>
+    <button type="button" class="mobile-cart-btn" id="mobileCartTrigger">
+      <span class="mobile-cart-left">
+        <span class="mobile-cart-count" id="mobileCartCount">0</span>
+        <span>Ver Comanda</span>
+      </span>
+      <span class="mobile-cart-total" id="mobileCartTotal">R$ 0,00</span>
+    </button>
+  </div>
+
+  <!-- Item Customization Modal (Combos / Bebidas / Burgers com Observação) -->
+  <div class="modal-backdrop" id="itemModalBackdrop" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" id="itemModal">
+      <div class="modal-header">
+        <div>
+          <span class="modal-eyebrow" id="modalEyebrow">PERSONALIZAR ITEM</span>
+          <h2 class="modal-title" id="modalTitle">Nome do Item</h2>
+        </div>
+        <button type="button" class="icon-btn" id="closeModalBtn" aria-label="Fechar modal">&times;</button>
+      </div>
+
+      <div class="modal-body" id="modalBody">
+        <!-- Dynamic form options -->
+      </div>
+
+      <div class="modal-footer">
+        <div class="qty-control" aria-label="Quantidade">
+          <button type="button" id="modalQtyMinus" aria-label="Diminuir quantidade">−</button>
+          <span id="modalQtyValue">1</span>
+          <button type="button" id="modalQtyPlus" aria-label="Aumentar quantidade">+</button>
+        </div>
+        <button type="button" class="btn btn-primary modal-add-btn" id="modalConfirmBtn">
+          Adicionar · <span id="modalPriceTotal">R$ 0,00</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Slide-Over Drawer -->
+  <div class="drawer-backdrop" id="cartBackdrop" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Comanda do Pedido" aria-hidden="true">
+    <div class="drawer-header">
+      <div>
+        <span class="modal-eyebrow">SUA COMANDA</span>
+        <h2 class="drawer-title">Pedido na Forja</h2>
+      </div>
+      <button type="button" class="icon-btn" id="closeCartBtn" aria-label="Fechar comanda">&times;</button>
+    </div>
+
+    <div class="drawer-body" id="cartItemsContainer">
+      <!-- Cart items rendered here -->
+    </div>
+
+    <div class="drawer-footer" id="cartFooter">
+      <div class="checkout-fields">
+        <div class="delivery-toggle" role="radiogroup" aria-label="Tipo de pedido">
+          <button type="button" class="toggle-opt active" data-mode="Retirada" aria-checked="true">Retirada</button>
+          <button type="button" class="toggle-opt" data-mode="Entrega" aria-checked="false">Entrega</button>
+        </div>
+        <input type="text" id="customerName" class="drawer-input" placeholder="Seu nome (opcional)" aria-label="Seu nome" />
+        <input type="text" id="customerAddress" class="drawer-input" placeholder="Endereço para entrega" aria-label="Endereço para entrega" hidden />
+      </div>
+
+      <div class="cart-summary-row">
+        <span>Total do Pedido</span>
+        <strong id="cartTotalValue">R$ 0,00</strong>
+      </div>
+
+      <div class="drawer-cta-group">
+        <button type="button" class="btn btn-primary btn-full" id="sendWhatsAppBtn">
+          Enviar Pedido no WhatsApp
+        </button>
+        <div class="drawer-secondary-row">
+          <button type="button" class="btn btn-ghost btn-sm" id="copyOrderBtn">Copiar resumo</button>
+          <button type="button" class="btn btn-ghost btn-sm btn-danger" id="clearCartBtn">Limpar comanda</button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="menu-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
